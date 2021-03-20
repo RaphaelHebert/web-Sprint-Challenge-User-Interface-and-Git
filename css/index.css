@@ -31,6 +31,34 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+header {
+    width: 100%;
+    margin-top: 20px;
+}
+
+header section {
+    margin-bottom: 30px;
+}
+
+header nav {
+    width: 80%;
+    padding: 0 4%;
+    font-size: 14px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+.headertop {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-between;
+    align-items: baseline;
+    align-content:space-around;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -67,15 +95,14 @@ p {
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto;
+    margin: 0 15%;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border-bottom: 1px dashed black;
 }
 
