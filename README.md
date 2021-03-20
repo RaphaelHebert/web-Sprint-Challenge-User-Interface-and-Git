@@ -34,14 +34,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. If you were to describe semantic HTML to the next cohort of students, what would you say?
 
+ Semantic HTML is all the HTML elements with a meaning: these elements are called semantic elements. A semantic element is an element that has a for the browser and the developer. For example the h1 element is meant to be used for the main title of the page, it will help the search engine to know what your page is about.. on the opposite, div element are not semantic, they are only used to group other element together, thus they're used for styling purposes only.
+
 2. Name two big differences between ```display: block;``` and ```display: inline;```.
+
+```display: block;``` makes the element starts on a new line and takes all the properties of the box model while ```display: inline;``` makes the element to be displayed on the same line as other element (it doesn't start on a new line) and it doesn't have top and bottom margins; 
 
 3. What are the 4 areas of the box model?
 
+From the center outwards:
+ - content
+ - padding
+ - border
+ - margin
+
 4. While using flexbox, what axis does the following property work on: ```align-items: center```?
+
+ It works on the cross axis.
 
 5. Explain why git is valuable to a team of developers.
 
+ As a version control system git allows the user to record their work and keep trace of its history, this is great to keep track of every modifications made on a project. Also Git allows users to work collaboratively by creating new branches on existing projecting and eventualy merging these new branches to the main branch of the project. When merging branches git make sure that the content of the branches to be merged don't conflict.
+ 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
 ## Project Set Up
