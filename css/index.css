@@ -30,7 +30,16 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    width: 100%;
+    padding: 10%;
 }
+
+/* 
+==============================
+header
+==============================
+*/
+
 header {
     width: 100%;
     margin-top: 20px;
@@ -41,22 +50,43 @@ header section {
 }
 
 header nav {
-    width: 80%;
-    padding: 0 4%;
     font-size: 14px;
+    max-width: 640px;
 }
 
 header a {
     text-decoration: none;
     color: black;
-    margin: 10px;
 }
 .headertop {
+    width: 100%;
     display: flex;
     flex-flow: row wrap; 
     justify-content: space-between;
     align-items: baseline;
     align-content:space-around;
+}
+
+.logo {
+    margin: 0;
+}
+
+/* ============================
+button
+===============================
+*/
+
+button {
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background: white;
+    margin: 20px 0;
+}
+
+button:hover {
+    background: black;
+    color: white;
 }
 
 ol, ul {
@@ -89,7 +119,9 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
-
+h1 {
+    text-align: left;
+}
 p {
     line-height: 1.4;
 }
@@ -97,20 +129,35 @@ p {
 .container {
     margin: 0 15%;
 }
-
 .top-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     margin: 20px 0;
     border-bottom: 1px dashed black;
-}
-
-.top-content .text-container {
-    width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
 }
+.top-content .text-container {
+    width: 370px;
+}
+.content {
+    margin: 20px 0 0 0;
+    border-bottom: 0px solid black;
+    padding: 0 1%;
+}
+
+.bottom-content {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column
+}
+.textbutton {
+    border-bottom: 1px dashed black;
+    margin: 10px 0 60px 0;
+
+}
+
 
 .middle-content {
     margin-bottom: 20px;
@@ -202,4 +249,8 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+nav a:hover {
+    color: lightcoral;
 }
