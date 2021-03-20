@@ -44,31 +44,30 @@ header {
     width: 100%;
     margin-top: 20px;
 }
-
+header img {
+    max-width: 100%;
+}
 header section {
     margin-bottom: 30px;
 }
-
 header nav {
     font-size: 14px;
     max-width: 640px;
+    margin-top: 10px;
 }
-
 header a {
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 .headertop {
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-flow: row wrap; 
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
-    align-content:space-around;
-}
-
-.logo {
-    margin: 0;
+    align-content: space-between;
 }
 
 /* ============================
