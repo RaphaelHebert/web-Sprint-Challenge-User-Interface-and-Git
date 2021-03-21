@@ -28,49 +28,61 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
+    box-sizing: content-box;
 	line-height: 1;
-    width: 100%;
-    padding: 10%;
+    max-width: 800px;
+    padding: 5% 20% 0 20%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav {
+    max-width: 600px;
+    font-size: 14px;  
+    padding-right: 50px;
+}
+
+nav a:hover {
+    color: lightcoral;
+}
+
+p {
+    line-height: 1.4;
+    margin: 15px 0;
 }
 
 /* 
 ==============================
-header
+flexbox
 ==============================
 */
 
-header {
-    width: 100%;
-    margin-top: 20px;
-}
-header img {
-    max-width: 100%;
-}
-header section {
-    margin-bottom: 30px;
-}
-header nav {
-    font-size: 14px;
-    max-width: 640px;
-    margin-top: 10px;
-}
-header a {
-    text-decoration: none;
-    color: black;
-    text-align: center;
-}
-.headertop {
-    overflow: hidden;
+.flexbetween {
     width: 100%;
     display: flex;
     flex-flow: row wrap; 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
-    align-content: space-between;
+    align-content: center;
 }
 
-/* ============================
+/* 
+===============================
 button
 ===============================
 */
@@ -88,96 +100,74 @@ button:hover {
     color: white;
 }
 
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-}
+/* 
+===============================
+headers
+===============================
+*/
 
 h1, h2, h3, h4, h5 {
     font-size: 18px;
-    margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
+
 h1 {
+    margin-bottom: 15px;
     text-align: left;
 }
-p {
-    line-height: 1.4;
+
+/* 
+==============================
+header
+==============================
+*/
+
+header {
+    margin-top: 20px;
+}
+header img {
+    max-width: 100%;
+}
+header section {
+    margin-bottom: 30px;
 }
 
-.container {
-    margin: 0 15%;
-}
-.top-content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: 20px 0;
+/* 
+==============================
+containers
+==============================
+*/
+
+.row1 {
     border-bottom: 1px dashed black;
-    padding: 0 1%;
-    padding-bottom: 20px;  
-}
-.top-content .text-container {
-    width: 370px;
-}
-.content {
-    margin: 20px 0 0 0;
-    border-bottom: 0px solid black;
-    padding: 0 1%;
+    padding: 20px 0;
 }
 
-.bottom-content {
-    padding: 0 20px 20px 20px;
-    display: flex;
-    flex-direction: column
+.lastrow {
+    border-bottom: none;
 }
+.col1-2 {
+    max-width: 370px;
+}
+
+.col1-3 {
+    max-width: 246px;
+}
+
 .textbutton {
-    border-bottom: 1px dashed black;
-    margin: 10px 0 60px 0;
-
+    margin: 10px 0 0 0;
 }
 
+/* 
+==============================
+boxes
+==============================
+*/
 
-.middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-}
-
-.middle-content h2 {
-    padding: 0 2%;
-    margin-bottom: 0;
-}
-
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.middle-content .boxes .box {
-    width: 12.5%;
+.box {
+    width: 100px;
     height: 100px;
-    margin: 20px 2.5%;
+    margin: 2.5% 2.5% 0 2.5%;
     color: white;
     display: flex;
     align-items: center;
@@ -223,13 +213,11 @@ p {
     justify-content: space-around;
 }
 
-.bottom-content .text-container {
-    padding-right: 4%;
-}
-
-.bottom-content .text-container:last-child {
-    padding-right: 0;
-}
+/* 
+==============================
+footer
+==============================
+*/
 
 footer {
     width: 100%;
@@ -237,19 +225,12 @@ footer {
 }
 
 footer nav {
-    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 2%;
-    font-size: 14px;
 }
 
 footer nav a {
     color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: lightcoral;
 }
