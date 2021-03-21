@@ -28,103 +28,196 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Rubik', sans-serif;
+body {
+    box-sizing: content-box;
+	line-height: 1;
+    max-width: 800px;
+    padding: 5% 20% 0 20%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav {
+    max-width: 600px;
+    font-size: 14px;  
+    padding-right: 50px;
+}
+
+nav a:hover {
+    color: lightcoral;
 }
 
 p {
     line-height: 1.4;
+    margin: 15px 0;
 }
 
-.container {
-    width: 800px;
-    margin: 0 auto;
-}
+/* 
+==============================
+flexbox
+==============================
+*/
 
-.top-content {
+.flexbetween {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+    flex-flow: row wrap; 
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: center;
 }
 
-.top-content .text-container {
-    width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
+/* 
+===============================
+button
+===============================
+*/
+
+button {
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background: white;
+    margin: 20px 0;
 }
 
-.middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-}
-
-.middle-content h2 {
-    padding: 0 2%;
-    margin-bottom: 0;
-}
-
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.middle-content .boxes .box {
-    width: 12.5%;
-    height: 100px;
+button:hover {
     background: black;
-    margin: 20px 2.5%;
+    color: white;
+}
+
+/* 
+===============================
+headers
+===============================
+*/
+
+h1, h2, h3, h4, h5 {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* 
+==============================
+header
+==============================
+*/
+
+header {
+    margin-top: 20px;
+}
+header img {
+    max-width: 100%;
+}
+header section {
+    margin-bottom: 30px;
+}
+
+/* 
+==============================
+containers
+==============================
+*/
+
+.row1 {
+    border-bottom: 1px dashed black;
+    padding: 20px 0;
+}
+
+.lastrow {
+    border-bottom: none;
+}
+.col1-2 {
+    max-width: 370px;
+}
+
+.col1-3 {
+    max-width: 246px;
+}
+
+.textbutton {
+    margin: 10px 0 0 0;
+}
+
+/* 
+==============================
+boxes
+==============================
+*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 2.5% 2.5% 0 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.box:nth-child(1) {
+    background: teal;
+}
+.box:nth-child(2) {
+    background: gold;
+}
+.box:nth-child(3) {
+    background: gold;
+}
+.box:nth-child(2) {
+    background: cadetblue;
+}
+.box:nth-child(4) {
+    background: coral;
+}
+.box:nth-child(5) {
+    background: crimson;
+}
+.box:nth-child(6) {
+    background: forestgreen;
+}
+.box:nth-child(7) {
+    background: darkorchid;
+}
+.box:nth-child(8) {
+    background: hotpink;
+}
+.box:nth-child(9) {
+    background: indigo;
+}
+.box:nth-child(10) {
+    background: dodgerblue;
+}
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
     justify-content: space-around;
 }
 
-.bottom-content .text-container {
-    padding-right: 4%;
-}
-
-.bottom-content .text-container:last-child {
-    padding-right: 0;
-}
+/* 
+==============================
+footer
+==============================
+*/
 
 footer {
     width: 100%;
@@ -132,15 +225,12 @@ footer {
 }
 
 footer nav {
-    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 2%;
-    font-size: 14px;
 }
 
 footer nav a {
     color: white;
-    text-decoration: none;
 }
